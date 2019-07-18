@@ -1,0 +1,119 @@
+
+=================== Get All
+URL - http://localhost:8080/psps
+Request Method - GET
+
+
+Response:
+[
+  {
+      "id":2,
+      "pspCode":"p001",
+      "pspShortname":"pspShortname1",
+      "pspDescription":"pspDescription1",
+      "active":true
+  },
+  {
+    "id":2,
+    "pspCode":"p002",
+    "pspShortname":"pspShortname2",
+    "pspDescription":"pspDescription2",
+    "active":true
+  }
+]
+
+
+=================== Get psp by id
+URL - http://localhost:8080/psps/1
+Request Method - GET
+
+Response:
+{
+      "id":2,
+      "pspCode":"p001",
+      "pspShortname":"pspShortname1",
+      "pspDescription":"pspDescription1",
+      "active":true
+}
+
+
+=================== Get psp by code
+URL - http://localhost:8080/psps?pspCode={pspCode}
+Request Method - GET
+
+Response:
+{
+      "id":2,
+      "pspCode":"p001",
+      "pspShortname":"pspShortname1",
+      "pspDescription":"pspDescription1",
+      "active":true
+}
+
+
+=================== Create psp
+URL - http://localhost:8080/psps
+Request Method - POST
+
+Request:
+{
+      "id":2,
+      "pspCode":"p001",
+      "pspShortname":"pspShortname1",
+      "pspDescription":"pspDescription1",
+      "active":true
+}
+
+Response:
+{
+      "statusCode":2000,
+      "codeDescription":Success,
+      "content": {
+            "id":2,
+            "pspCode":"p001",
+            "pspShortname":"pspShortname1",
+            "pspDescription":"pspDescription1",
+            "active":true
+      }
+ }
+
+=================== Update psp
+URL - http://localhost:8080/psps
+Request Method - PUT
+
+Request:
+{
+      "id":2,
+      "pspCode":"p001",
+      "pspShortname":"pspShortname1",
+      "pspDescription":"pspDescription1",
+      "active":true
+}
+
+Response:
+{
+      "statusCode":2000,
+      "codeDescription":Success,
+      "content": {
+            "id":2,
+            "pspCode":"p001",
+            "pspShortname":"pspShortname1",
+            "pspDescription":"pspDescription1",
+            "active":true
+      }
+
+ }
+
+
+=================== Delete psp
+URL - http://localhost:8080/psps/1
+Request Method - DELETE
+
+
+Response:
+{
+      "statusCode":2000,
+      "codeDescription":Success,
+      "content": 1
+    
+ }
